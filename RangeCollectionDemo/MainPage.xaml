@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="RangeCollectionDemo.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Grid
+        Padding="10"
+        ColumnDefinitions="*,*"
+        RowDefinitions="*,Auto"
+        VerticalOptions="Center">
+
+        <ListView ItemsSource="{Binding Items}"
+                  Grid.ColumnSpan="2"/>
+
+        <Button
+            x:Name="CounterBtn"
+            Clicked="CounterBtn_Clicked"
+            HorizontalOptions="Center"
+            
+            Grid.Row="1"
+            Grid.Column="0"
+            Text="Load Data" />
+
+
+        <Button
+            x:Name="CounterBtnClear"
+            Clicked="CounterBtnClear_Clicked"
+            Grid.Row="1"
+            Grid.Column="1"
+            HorizontalOptions="Center"
+            Text="Clear Data" />
+
+    </Grid>
+
+</ContentPage>
